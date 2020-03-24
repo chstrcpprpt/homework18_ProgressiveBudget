@@ -28,7 +28,7 @@ function saveRecord(record) {
 }
 
 
-function checkDB() {
+function checkDatabase() {
   const transaction = db.transaction(["pending"], "readwrite");
   const store = transaction.objectStore("pending");
   const getAll = store.getAll();
@@ -57,4 +57,4 @@ function checkDB() {
 }
 
 // listen for app coming back online
-window.addEventListener("online", checkDB);
+window.addEventListener("online", checkDatabase);
